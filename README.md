@@ -1,15 +1,31 @@
 # Battleship API
 
+## Requirements for project:
+ - `python3` and `virtualenv`
 
-## Run:
+ or
+
+ - `docker`
+
+
+## Run
+
+`python3` and `virtualenv`:
 ```sh
 virtualenv venv
-pip3 install -r requirements.txt
+source venv/bin/activate
+cd battleship-api
+pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
 
-Or use docker.
+Or use `docker`:
+```sh
+cd battleship-api
+docker build -t battleship-api .
+docker run -t -i -p 8000:8000 battleship-api
+```
 
 
 ## API urls
