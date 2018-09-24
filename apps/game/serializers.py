@@ -35,8 +35,15 @@ class AttackSerializer(serializers.ModelSerializer):
         return attack
 
 
+class GameAttackSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Attack
+        fields = ('x', 'y', 'hit')
+
+
 class GameSerializer(serializers.ModelSerializer):
-    attacks = AttackSerializer(many=True, read_only=True)
+    attacks = GameAttackSerializer(many=True, read_only=True)
     # boolean field shows if game is finished or not
     finished_game = serializers.BooleanField(default=False, read_only=True)
 
