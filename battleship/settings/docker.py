@@ -1,0 +1,1 @@
+from battleship.settings import *
