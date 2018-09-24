@@ -13,16 +13,18 @@ python manage.py runserver
 `http://localhost:8000/api/game/game/`
 
 >POST - start new game
->GET - list of all games
 
-POST data:
+Data:
 ```json
  {
-	"name": "Game 1" // optional
+	"name": "Game 1"
  }
 ```
+ - name is optional.
 
-GET:
+>GET - list of all games
+
+Response:
 ```json
 {
 	"id": 1,
@@ -39,7 +41,7 @@ GET:
 },
 ```
 ---
-`http://localhost:8000/api/game/game/{id}/attack/` - {id} = game id
+`http://localhost:8000/api/game/game/{id}/attack/` - {id} is game id
 
 >POST - new attack on field
 
@@ -56,8 +58,12 @@ Returns:
  {
 	"x": 5,
 	"y": 6,
-	"hit": false, // if ship has been hit
-	"finished_game": false // if all ships has been hit, game finished
+	"hit": false,
+	"finished_game": false
  }
 ```
+
+
+ - `hit` - if ship has been hit or not
+ - `finished_game` - if all ships has been hit, game finished
 ---
