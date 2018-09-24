@@ -2,12 +2,15 @@
 
 
 ## Run:
-```
+```sh
 virtualenv venv
 pip3 install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
+
+Or use docker.
+
 
 ## API urls
 `http://localhost:8000/api/game/game/`
@@ -67,3 +70,12 @@ Returns:
  - `hit` - if ship has been hit or not
  - `finished_game` - if all ships has been hit, game finished
 ---
+
+
+### Tests
+```sh
+python manage.py test
+```
+
+Also, there is integration with CircleCI:
+https://circleci.com/gh/mirzadelic/battleship-api

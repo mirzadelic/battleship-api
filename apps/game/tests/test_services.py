@@ -1,5 +1,3 @@
-from collections import Counter
-
 from django.test import TestCase
 
 from apps.game.models import Game, ShipPoint
@@ -7,7 +5,7 @@ from apps.game.services import RandomShips
 from apps.game.utils import SHIP_TYPES
 
 
-class RandomShipsTest(TestCase):
+class RandomShipsTests(TestCase):
 
     def setUp(self):
         self.game = Game.objects.create(name='Game 1')
