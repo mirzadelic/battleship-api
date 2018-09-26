@@ -29,7 +29,7 @@ docker run -t -i -p 8000:8000 battleship-api
 
 
 ## API urls
-`http://localhost:8000/api/game/game/`
+`http://localhost:8000/api/v1/game/game/`
 
 >POST - start new game
 
@@ -60,7 +60,7 @@ Response:
 },
 ```
 ---
-`http://localhost:8000/api/game/game/{id}/attack/` - {id} is game id
+`http://localhost:8000/api/v1/game/game/{id}/attack/` - {id} is game id
 
 >POST - new attack on field
 
